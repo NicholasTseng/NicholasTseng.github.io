@@ -449,12 +449,85 @@ footer {
   }
 
   .about img {
-        height: 30rem;
-        width: 30rem;
+      height: 25rem;
+      width: 25rem;
+      margin-top: 2rem;
+      margin-bottom: 4rem;
+      padding: 0;
     }
 
   .bio {
     margin-top: -3rem;
-    width: 30.5rem;
+    width: 26.5rem;
   }
+
+  .icon {
+    width: 5.875rem;
+    height: 5.25rem;
+  }
+
+  .projects-container {
+    flex-direction: column;
+  }
+
+  .project-container {
+    width: 20.875rem;
+  }
+
+  .contact-form-container {
+    max-width: 26rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .about img {
+      height: 23rem;
+      width: 23rem;
+      padding: 0rem 1.3rem;
+      margin-bottom: 4rem;
+    }
+
+  .bio {
+    margin-top: -3rem;
+    width: 20.785rem;
+  }
+
+  .contact-form-container {
+    max-width: 20.875rem;
+  } 
+}
+
+@media screen and (max-width: 425px) {
+  .welcome h1 {
+    font-size: 3rem;
+  }
+  
+  .welcome h2 {
+    font-size: 1.5rem;
+  }
+
+  .about img {
+      height: 16rem;
+      width: 16rem;
+      padding: 0rem 1.3rem;
+      margin-bottom: 4rem;
+    }
+
+  .bio {
+    margin-top: -3rem;
+    width: 16rem;
+  }
+
+  .contact-form-container {
+    max-width: 20.875rem;
+  }
+  
+  .project-container {
+    width: 16rem;
+    padding: 1rem;
+  }
+
+  .contact-form-container {
+    max-width: 16rem;
+  } 
 }
