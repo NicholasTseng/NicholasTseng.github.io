@@ -1,0 +1,460 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+/* Variables */
+:root {
+  --font-family: "Roboto", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --primary-bg-color: #202020;
+  --secondary-bg-color: #282828;
+  --primary-color: #FEE715FF;
+  --secondary-color: #ff7235;
+  --tertiary-color: #ffffff;
+  --primary-shadow: rgba(0, 0, 0, .3);
+  --secondary-shadow: #f8f8f8;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+}
+/* Variables end */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* CSS Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--secondary-shadow);
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--primary-bg-color);
+}
+
+h1, h2, h3, p {
+  color:var(--primary-color);
+}
+
+.anchor {
+  scroll-margin-top: 4.5em;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  margin: 0.5rem 0;
+  background-color: var(--tertiary-color);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: var(--bold-font);
+  transition: var(--transition);
+  border: 2px solid var(--tertiary-color);
+  color: var(--primary-bg-color);
+}
+
+.btn:hover { 
+  border: 2px solid var(--primary-color);
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+/* navbar CSS */
+nav {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.25rem 3.5rem;
+  background-color: var(--secondary-bg-color);
+  box-shadow: 0 3px 6px var(--primary-shadow);
+  height: 0;
+}
+
+nav h1 {
+  color: var(--primary-color);
+}
+
+nav a {
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+nav a:hover {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+nav ul {
+  display: flex;
+  gap: 1.9rem;
+}
+
+nav ul li {
+  font-weight: var(--bold-font);
+}
+
+.burger-menu {
+  color: var(--primary-color);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
+}
+
+/* welcome CSS */
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0rem;
+  height: 35rem;
+  position: relative;
+  font-family: 'Courier New';
+}
+
+.welcome h1 {
+  font-size: 4rem;
+}
+
+.welcome h2 {
+  font-size: 2.5rem;
+}
+
+.welcome::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  background-image: url('../images/web-development-background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* about me CSS */
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  max-width: 68.75rem;
+  margin: auto;
+}
+
+.about img {
+  height: 37.5rem;
+  width: 37.5rem;
+  padding: 0rem 5rem;
+}
+
+.bio {
+  width: 25rem;
+  padding: 1rem;
+  border-radius: 15px;
+  box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+  background-color: var(--secondary-bg-color);
+  text-align: justify;
+}
+
+/* skill CSS */
+.skills {
+  margin: auto;
+  text-align: center;
+  margin-top: 2rem;
+  padding: 2rem 0rem;
+  background-color: var(--primary-bg-color);
+}
+
+.skill-header {
+  margin-bottom: 1rem;
+}
+
+.skills-wrapper img {
+  padding: 1.25rem;
+}
+
+.icon {
+  width: 11.875rem;
+  height: 11.25rem;
+}
+
+.icon-card {
+  background-color: var(--secondary-bg-color);
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  padding: 20px;
+  margin: 10px;
+}
+
+/* Projects CSS */
+.projects {
+  padding: 32px 0;
+  margin-top: 2rem;
+}
+
+.project-pic {
+  width: 65%;
+  height: 60%;
+}
+
+.projects-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.projects-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.project-container {
+  text-align: center;
+  width: 24rem;
+  padding: 1rem;
+}
+
+.project-container p {
+  padding: 0.4rem;
+}
+
+.project-title {
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-details {
+  margin-bottom: var(--bottom-margin);
+}
+
+.project-card {
+  border-radius: 11px;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  background-color: var(--secondary-bg-color);
+  padding: 20px;
+  margin: 10px 15px;
+}
+
+.project-link {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+
+}
+
+a.project-link:hover {
+  color: var(--primary-bg-color);
+}
+
+/* Contact CSS */
+.contact {
+  margin-top: 2rem;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: var(--bottom-margin-2);
+}
+
+.contact-form-container {
+  max-width: 40.75rem;
+  margin: 0 auto;
+  padding: 1.2rem;
+  box-shadow: 0 3px 10px var(--primary-shadow);
+  background-color: var(--secondary-bg-color);
+  border-radius: 11px;
+}
+
+.contact-form-container label {
+  line-height: 2.7em;
+  font-weight: var(--bold-font);
+  color: var(--primary-color);
+}
+
+.contact-form-container textarea {
+  min-height: 6.25rem;
+  font-size: 14px;
+}
+
+.contact-form-container .input-field {
+  width: 100%;
+  padding : 1rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 0.875rem;
+  outline: none;
+  background-color: var(--primary-bg-color);
+  margin-bottom: 0.5rem;
+  color: var(--tertiary-color);
+}
+
+.input-field::placeholder {
+  color: var(--primary-color);
+}
+
+.input-field:focus::placeholder {
+  color: transparent;
+}
+
+/* Change autocomplete styles in WebKit */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--tertiary-color);
+  -webkit-box-shadow: 0 0 0px 1000px var(--primary-bg-color) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Side-icons CSS */
+.socials {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  right: 1%;
+  bottom: 50%;
+}
+
+.socicon {
+  width: 3rem;
+  height: 3rem;
+}
+
+.socicon:hover {
+  transform: scale(1.1);
+  transition: var(--transition);
+}
+
+/* Footer CSS */
+footer {
+  background-color: var(--secondary-bg-color);
+  padding: 1.25rem;
+  text-align: center;
+  margin: 2rem 0 0;
+}
+
+.copy-right {
+  font-size: 0.8rem;
+}
+
+/* Up arrow */
+.scroll-up {
+  position: fixed;
+  right: 0.5%;
+  bottom: 3%;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  color: var(--primary-color);
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.up-arrow {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  @keyframes growDown {
+    0% {
+      transform: scaleY(0)
+    }
+    80% {
+      transform: scaleY(1.1)
+    }
+    100% {
+      transform: scaleY(1)
+    }
+  }
+
+  @keyframes growUp {
+    0% {
+      transform: scaleY(1)
+    }
+    20% {
+      transform: scaleY(1.1)
+    }
+    100% {
+      transform: scaleY(0);
+    }
+  }
+
+  nav {
+    padding: 2.25rem 1.75rem;
+  }
+
+  nav ul {
+    position: fixed;
+    background-color: var(--secondary-bg-color);
+    flex-direction: column;
+    top: 4.5rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.5s ease-in;
+    animation: growUp 300ms ease-in-out forwards;
+    transform-origin: top center
+  }
+
+   nav ul li {
+    margin: 8px;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  nav ul.show {
+    animation: growDown 300ms ease-in-out forwards;
+    display: flex;
+    transform-origin: top center
+  }
+
+  .about {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .about img {
+        height: 30rem;
+        width: 30rem;
+    }
+
+  .bio {
+    margin-top: -3rem;
+    width: 30.5rem;
+  }
+}
