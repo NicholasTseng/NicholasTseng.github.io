@@ -28,3 +28,19 @@ navLink.forEach((link) =>
     ul.classList.remove("show");
   })
 );
+
+// Type effect
+displayName = () => {
+  const personName = 'Nicholas Tseng';
+  const speed = 75;
+  const personNameElement = document.querySelector('#name');
+  let textPosition = 0;
+
+  personNameElement.innerHTML = personName.substring(0, textPosition);
+
+  if (textPosition++ !== personName.length){
+    setTimeout(displayName, speed);
+  }
+}
+
+document.addEventListener('load', displayName);
