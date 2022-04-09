@@ -29,12 +29,12 @@ navLink.forEach((link) =>
   })
 );
 
+let textPosition = 0;
 // Type effect
 displayName = () => {
   const personName = 'Nicholas Tseng';
   const speed = 75;
   const personNameElement = document.querySelector('#name');
-  let textPosition = 0;
 
   personNameElement.innerHTML = personName.substring(0, textPosition);
 
@@ -43,4 +43,4 @@ displayName = () => {
   }
 }
 
-document.addEventListener('load', displayName);
+window.addEventListener('load', displayName);
