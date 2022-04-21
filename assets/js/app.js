@@ -15,7 +15,12 @@ const ul = document.querySelector("nav ul");
 const nav = document.querySelector("nav");
 
 burger.addEventListener("click", () => {
-    ul.classList.toggle("show");
+    if (ul.classList.contains("show")){
+      ul.classList.toggle("hide");
+    }
+    else {
+      ul.classList.toggle("show");
+    }
 });
 
 // Close hamburger menu when a link is clicked

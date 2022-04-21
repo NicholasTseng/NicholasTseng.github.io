@@ -424,9 +424,7 @@ footer {
     left: 0;
     width: 100%;
     text-align: center;
-    transition: transform 0.5s ease-in;
-    animation: growUp 300ms ease-in-out forwards;
-    transform-origin: top center
+    display: none;
   }
 
    nav ul li {
@@ -441,6 +439,11 @@ footer {
     animation: growDown 300ms ease-in-out forwards;
     display: flex;
     transform-origin: top center
+  }
+
+  nav ul.hide {
+    animation: growUp 300ms ease-in-out forwards;
+    transform-origin: top center;
   }
 
   .about {
